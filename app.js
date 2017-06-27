@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var productos=require('./routes/productos');
 var tipopago=require('./routes/tipodepago');
 var cliente=require('./routes/clientes');
+var cotizacion=require('./routes/cotizaciones');
+var detcotizacion=require('./routes/detcotizacion');
 var app = express();
 
 // view engine setup
@@ -30,6 +32,8 @@ app.use('/users', users);
 app.use('/productos',productos);
 app.use('/tipodepago',tipopago);
 app.use('/clientes',cliente);
+app.use('/cotizaciones',cotizacion);
+app.use('/detcotizacion',detcotizacion);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
