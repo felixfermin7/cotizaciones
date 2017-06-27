@@ -8,6 +8,7 @@ var cors=require('cors');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var productos=require('./routes/productos');
+var tipopago=require('./routes/tipodepago');
 var app = express();
 
 // view engine setup
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/productos',productos);
+app.use('/tipodepago',tipopago);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
